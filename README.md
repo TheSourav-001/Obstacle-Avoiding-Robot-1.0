@@ -25,7 +25,7 @@ The Obstacle Avoiding Robot is an autonomous system that detects obstacles using
 
 ## Project Picture
 
-![Project Picture](WhatsApp Image 2025-10-15 at 02.51.56_ddaf301f.jpg)  
+![Project Picture](WhatsApp%20Image%202025-10-15%20at%2002.51.56_ddaf301f.jpg)
 
 
 
