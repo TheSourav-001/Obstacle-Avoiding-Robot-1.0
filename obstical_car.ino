@@ -1,33 +1,28 @@
-#include <Servo.h>          //Servo motor library. This is standard library
-#include <NewPing.h>        //Ultrasonic sensor function library. You must install this library
+#include <Servo.h>
+#include <NewPing.h>
 
-//our L298N control pins
 const int LeftMotorForward = 7;
 const int LeftMotorBackward = 6;
 const int RightMotorForward = 4;
 const int RightMotorBackward = 5;
 
-//sensor pins
-#define trig_pin A1 //analog input 1
-#define echo_pin A2 //analog input 2
+#define trig_pin A1
+#define echo_pin A2
 
 #define maximum_distance 200
 boolean goesForward = false;
 int distance = 100;
 
-NewPing sonar(trig_pin, echo_pin, maximum_distance); //sensor function
-Servo servo_motor; //our servo name
-
+NewPing sonar(trig_pin, echo_pin, maximum_distance);
+Servo servo_motor;
 
 void setup(){
-
   pinMode(RightMotorForward, OUTPUT);
   pinMode(LeftMotorForward, OUTPUT);
   pinMode(LeftMotorBackward, OUTPUT);
   pinMode(RightMotorBackward, OUTPUT);
   
-  
-  servo_motor.attach(10); //our servo pin
+  servo_motor.attach(10);
 
   servo_motor.write(115);
   delay(2000);
@@ -42,7 +37,6 @@ void setup(){
 }
 
 void loop(){
-
   int distanceRight = 0;
   int distanceLeft = 0;
   delay(50);
@@ -71,7 +65,7 @@ void loop(){
   else{
     moveForward(); 
   }
-    distance = readPing();
+  distance = readPing();
 }
 
 int lookRight(){  
@@ -103,7 +97,6 @@ int readPing(){
 }
 
 void moveStop(){
-  
   digitalWrite(RightMotorForward, LOW);
   digitalWrite(LeftMotorForward, LOW);
   digitalWrite(RightMotorBackward, LOW);
@@ -113,9 +106,7 @@ void moveStop(){
 }
 
 void moveForward(){
-
   if(!goesForward){
-
     goesForward=true;
     
     digitalWrite(LeftMotorForward, HIGH);
@@ -129,7 +120,6 @@ void moveForward(){
 }
 
 void moveBackward(){
-
   goesForward=false;
 
   digitalWrite(LeftMotorBackward, HIGH);
@@ -139,11 +129,9 @@ void moveBackward(){
   digitalWrite(RightMotorForward, LOW);
   analogWrite(9,150);
   analogWrite(10,150);
-  
 }
 
 void turnRight(){
-
   digitalWrite(LeftMotorForward, HIGH);
   digitalWrite(RightMotorBackward, HIGH);
   
@@ -157,13 +145,9 @@ void turnRight(){
   
   digitalWrite(LeftMotorBackward, LOW);
   digitalWrite(RightMotorBackward, LOW);
- 
-  
-  
 }
 
 void turnLeft(){
-
   digitalWrite(LeftMotorBackward, HIGH);
   digitalWrite(RightMotorForward, HIGH);
   
