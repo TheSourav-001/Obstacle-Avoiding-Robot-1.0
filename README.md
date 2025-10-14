@@ -22,7 +22,12 @@ The Obstacle Avoiding Robot is an autonomous system that detects obstacles using
 ## Circuit Diagram
 
 ![Circuit Diagram](263b224d-9320-4104-9cc7-fe69e9cfadb2.jpg)  
-*Replace `path/to/your-circuit-image.png` with your actual file name.*  
+
+## Project Picture
+
+![Project Picture](WhatsApp Image 2025-10-15 at 02.51.56_ddaf301f.jpg)  
+
+
 
 ## How to Run
 
