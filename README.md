@@ -55,6 +55,8 @@ The following images illustrate the physical connections and the robot's assembl
 2.  **Upload Code:** Open the provided Arduino code (`.ino` file), select the correct board and port, and upload it to the Arduino UNO.
 3.  **Power On:** Place the robot on a flat, open surface and connect the battery to the L298N driver and Arduino.
 4.  **Observe:** The robot will immediately begin moving forward, scanning its path, and autonomously avoiding obstacles when they are detected (at less than **30cm**).
+5.  For more details, visit the [Tutorial Website](https://g.co/gemini/share/80349e0410ac).
+
 
 ---
 
